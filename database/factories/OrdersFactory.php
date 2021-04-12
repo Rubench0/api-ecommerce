@@ -14,6 +14,7 @@ class OrdersFactory extends Factory
     {
         return [
             'order_date' => now(),
+            'delivery_date' => now(),
             'priority_id' => $this->faker->numberBetween($min = 1, $max = 3),
             'state_order_id' => $this->faker->numberBetween($min = 1, $max = 3),
         ];

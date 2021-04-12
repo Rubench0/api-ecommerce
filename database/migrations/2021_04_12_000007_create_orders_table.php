@@ -16,6 +16,7 @@ class CreateOrdersTable extends Migration
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
             $table->timestamp('order_date');
+            $table->timestamp('delivery_date');
             $table->foreignId('priority_id')->references('id')->on('priority');
             $table->foreignId('state_order_id')->references('id')->on('state_order');
             $table->timestamps();
