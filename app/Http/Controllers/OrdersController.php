@@ -15,9 +15,9 @@ class OrdersController extends Controller {
         $delivery_date = $request->input('delivery_date');
         try {
             if ($delivery_date) {
-                $orders = Orders::where('delivery_date', $delivery_date)->get();
+                $orders = Orders::with('priority', 'state_order')->where('delivery_date', $delivery_date)->get();
             } else {
-                $orders = Orders::all();
+                $orders = Orders::with('priority', 'state_order')->get();
             }
             return response()->json($orders, 200);
         } catch (\Throwable $th) {

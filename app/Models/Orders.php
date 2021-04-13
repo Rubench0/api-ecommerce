@@ -18,7 +18,7 @@ class Orders extends Model
         return $this->belongsTo(Priority::class);
     }
 
-    public function state() {
+    public function state_order() {
         return $this->belongsTo(StateOrder::class);
     }
 

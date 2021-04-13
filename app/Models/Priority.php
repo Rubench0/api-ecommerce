@@ -9,7 +9,7 @@ use App\Models\Orders;
 class Priority extends Model
 {
     use HasFactory;
-    protected $table = 'orders';
+    protected $table = 'priority';
     protected $fillable = ['name'];
 
     public function orders() {
