@@ -19,4 +19,6 @@ Route::get('login', 'App\Http\Controllers\AuthController@auth');
 
 Route::group(['middleware' => ['jwt.verify']], function() {
     Route::get('user','App\Http\Controllers\AuthController@getAuthUser');
+    Route::get('orders','App\Http\Controllers\OrdersController@list');
+    Route::get('orders/{id}','App\Http\Controllers\OrdersController@show');
 });

@@ -11,7 +11,7 @@ class Inventory extends Model
 {
     use HasFactory;
     protected $table = 'inventory';
-    protected $fillable = ['amount','stock','min','products_id'];
+    protected $fillable = ['total','stock','min','products_id'];
 
     public function products() {
         return $this->belongsTo(Products::class);

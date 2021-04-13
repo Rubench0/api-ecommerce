@@ -14,9 +14,9 @@ class CreateInventoryOrdersTable extends Migration
     public function up()
     {
         Schema::create('inventory_orders', function (Blueprint $table) {
-            $table->integer('amount');
             $table->foreignId('orders_id')->references('id')->on('orders');
             $table->foreignId('inventory_id')->references('id')->on('inventory');
+            $table->integer('amount');
         });
     }
 

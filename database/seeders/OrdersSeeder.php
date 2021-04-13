@@ -15,8 +15,8 @@ class OrdersSeeder extends Seeder
      */
     public function run()
     {
-        $roles = Inventory::factory()->count(20)->create();
+        $items = Inventory::factory()->count(20)->create();
 
-        Orders::factory()->hasAttached($roles,['amount' => rand(1, 10)])->count(5)->create();
+        Orders::factory()->hasAttached($items,['amount' => rand(1, 10)])->count(5)->create();
     }
 }

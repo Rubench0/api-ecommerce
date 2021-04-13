@@ -13,7 +13,7 @@ class InventoryFactory extends Factory
     public function definition()
     {
         return [
-            'amount' => $this->faker->randomNumber(3),
+            'total' => $this->faker->randomNumber(3),
             'stock' => $this->faker->randomNumber(2),
             'min' => $this->faker->randomNumber(1),
             'last_supply' => now(),
