@@ -13,7 +13,7 @@ class ProvidersFactory extends Factory
     public function definition()
     {
         return [
-            'name' => Str::random(25),
+            'name' => $this->faker->company,
         ];
     }
 }
