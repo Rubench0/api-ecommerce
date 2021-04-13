@@ -34,7 +34,7 @@ class OrdersController extends Controller {
     public function show($id) {
         try {
             if ($id) {
-                $orders = Orders::with('inventories', 'inventories.products')->find($id); 
+                $orders = Orders::with('inventories', 'inventories.products', 'inventories.products.provider')->find($id); 
                 return response()->json($orders, 200);
             } else {
                 return response()->json('no se encuentra la ruta', 404);
